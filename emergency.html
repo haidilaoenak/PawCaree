@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Care | PawCare</title>
+  <meta name="description" content="Access pet emergency guidance, find the nearest vet clinic, and get help fast through PawCare Emergency.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#422824"/><circle cx="32" cy="18" r="7" fill="#422824"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#422824" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#422824" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#422824"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#422824" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#422824"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#422824"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#422824"/><circle cx="35" cy="17" r="1.5" fill="#FFE38A"/></svg></div><span class="logo-text">pawcare</span></a><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-actions"><a href="emergency.html" class="btn btn-danger btn-sm">🚨 Emergency</a><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-drawer" id="mobileDrawer"><div class="drawer-panel"><a href="index.html">🏠 Home</a><a href="services.html">🩺 Services</a><a href="about.html">👋 About Us</a><a href="contact.html">💬 Contact</a><div class="drawer-divider"></div><a href="emergency.html" class="btn btn-danger">🚨 Emergency</a></div></div>
+
+<!-- EMERGENCY HERO -->
+<section style="background:var(--danger);padding:64px 0 56px;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;" class="two-col">
+      <div>
+        <span class="eyebrow" style="background:rgba(255,255,255,.2);color:var(--white);">🚨 Emergency Guidance Prototype</span>
+        <h1 class="headline-xl mb-16" style="color:var(--white);">Emergency Help for Your Pet</h1>
+        <p class="body-lg mb-24" style="color:rgba(255,255,255,.88);max-width:460px;">Stay calm and choose the information flow you want to explore. This site does not provide live veterinary assistance.</p>
+        <div class="notice-box notice-red" style="max-width:460px;background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.3);">
+          <div class="notice-icon">⚠️</div>
+          <p style="color:rgba(255,255,255,.92);"><strong>Important:</strong> For life-threatening situations, contact or visit the nearest vet clinic directly. PawCare provides guidance and information, not live medical emergency services.</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&q=80&w=700"
+             alt="Veterinarian examining a dog" style="border-radius:var(--r-lg);width:100%;max-height:360px;object-fit:cover;box-shadow:var(--shadow-lg);" class="float">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 1: Choose Option -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-header mb-36">
+      <span class="eyebrow eyebrow-red">Step 1</span>
+      <h2 class="headline-lg mb-12">What Kind of Help Do You Need?</h2>
+      <p class="section-desc">Click an option below to get the right guidance for your situation.</p>
+    </div>
+
+    <div class="emerg-options" id="emergencyOptions">
+      <div class="emerg-option" data-option="guidance" role="button" tabindex="0" aria-pressed="false">
+        <div class="emerg-option-icon">📖</div>
+        <h3>Veterinary Guidance</h3>
+        <p>Get step-by-step first-aid instructions based on your pet's symptoms.</p>
+      </div>
+      <div class="emerg-option" data-option="hospital" role="button" tabindex="0" aria-pressed="false">
+        <div class="emerg-option-icon">🏥</div>
+        <h3>Find Nearest Clinic</h3>
+        <p>Enter your area to see the prototype's search limitation. Live clinic results are not connected.</p>
+      </div>
+      <div class="emerg-option" data-option="assistance" role="button" tabindex="0" aria-pressed="false">
+        <div class="emerg-option-icon">🤝</div>
+        <h3>Explore More Help</h3>
+        <p>Find other assistance options based on your location and current situation.</p>
+      </div>
+    </div>
+
+    <!-- FLOW 1: Veterinary Guidance -->
+    <div class="emerg-flow" id="flow-guidance">
+      <div class="notice-box notice-yellow mb-28">
+        <div class="notice-icon">⚠️</div>
+        <p><strong>Remember:</strong> This guidance is for initial reference only. Always consult a licensed veterinarian for proper diagnosis and treatment.</p>
+      </div>
+      <h3 style="font-size:1.3rem;margin-bottom:20px;">What symptoms is your pet showing?</h3>
+      <div class="guidance-grid">
+        <div class="guidance-card" data-symptom="breathing"><span>😮‍💨</span><strong>Difficulty Breathing</strong></div>
+        <div class="guidance-card" data-symptom="vomit"><span>🤢</span><strong>Vomiting / Diarrhea</strong></div>
+        <div class="guidance-card" data-symptom="injury"><span>🩹</span><strong>Wound / Bleeding</strong></div>
+        <div class="guidance-card" data-symptom="seizure"><span>⚡</span><strong>Seizure / Convulsion</strong></div>
+        <div class="guidance-card" data-symptom="lethargic"><span>😴</span><strong>Lethargic / Not Eating</strong></div>
+        <div class="guidance-card" data-symptom="poison"><span>☠️</span><strong>Possible Poisoning</strong></div>
+      </div>
+      <div class="guidance-result" id="guidance-result"></div>
+    </div>
+
+    <!-- FLOW 2: Find Hospital -->
+    <div class="emerg-flow" id="flow-hospital">
+      <div class="notice-box notice-yellow mb-28">
+        <div class="notice-icon">📍</div>
+        <p>Live search and hospital data are not available. In an urgent situation, find a local veterinary hospital using a map and contact them directly.</p>
+      </div>
+      <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap;">
+        <input type="text" id="locationInput" aria-label="City or area for the demo search" placeholder="Enter your city or area" style="flex:1;min-width:200px;padding:13px 16px;border:2px solid var(--grey-200);border-radius:var(--r-full);font-family:inherit;font-size:.93rem;outline:none;transition:border-color var(--t-fast);">
+        <button onclick="showDemoHospitals()" class="btn btn-danger">Search Clinics</button>
+      </div>
+      <p id="hospitals-notice" role="status" aria-live="polite" style="display:none;background:var(--yellow-pale);border:2px solid var(--yellow-dark);border-radius:var(--r-md);padding:14px 18px;font-size:.86rem;color:var(--brown-mid);margin-top:16px;"></p>
+    </div>
+
+    <!-- FLOW 3: Assistance -->
+    <div class="emerg-flow" id="flow-assistance">
+      <div class="notice-box notice-yellow mb-28">
+        <div class="notice-icon">🤝</div>
+        <p>Choose the type of assistance that fits your situation. All options below are guidance and demonstrations, not active services.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+        <div class="card" style="padding:28px;border-top:4px solid var(--yellow-dark);">
+          <span style="font-size:1.8rem;display:block;margin-bottom:12px;">📱</span>
+          <h4 style="font-size:1.05rem;margin-bottom:8px;">Online Consultation</h4>
+          <p class="body-sm mb-16">Schedule a video call with a vet to get professional advice from home — fast and convenient.</p>
+          <a href="appointment.html" class="btn btn-yellow btn-sm">Book Appointment →</a>
+        </div>
+        <div class="card" style="padding:28px;border-top:4px solid var(--blue);">
+          <span style="font-size:1.8rem;display:block;margin-bottom:12px;">📋</span>
+          <h4 style="font-size:1.05rem;margin-bottom:8px;">Check Health Record</h4>
+          <p class="body-sm mb-16">Open your pet's Health Record to review medical history and allergies before seeing a vet.</p>
+          <a href="health-record.html" class="btn btn-blue btn-sm">Open Health Record →</a>
+        </div>
+        <div class="card" style="padding:28px;border-top:4px solid var(--danger);">
+          <span style="font-size:1.8rem;display:block;margin-bottom:12px;">🗺️</span>
+          <h4 style="font-size:1.05rem;margin-bottom:8px;">Find Nearest Clinic</h4>
+          <p class="body-sm mb-16">Use the clinic search to find vet hospitals and emergency animal clinics in your area.</p>
+          <button onclick="document.querySelector('[data-option=hospital]').click()" class="btn btn-danger btn-sm">Find Clinic →</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="backBtn" style="display:none;margin-top:28px;">
+      <button onclick="resetEmergency()" class="btn btn-outline-brown">← Choose Another Option</button>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST AID TIPS -->
+<section class="section" style="background:var(--cream);padding-top:0;">
+  <div class="wrap">
+    <div class="section-header mb-36">
+      <span class="eyebrow">🩹 First Aid</span>
+      <h2 class="headline-lg mb-12">General Emergency Steps</h2>
+      <p class="section-desc">Essential steps to take before contacting a veterinarian.</p>
+    </div>
+    <div class="four-col">
+      <div class="card" style="padding:24px;"><div style="font-size:2rem;margin-bottom:12px;">😌</div><h4 style="font-size:1rem;margin-bottom:8px;">1. Stay Calm</h4><p class="body-sm">Your pet senses your anxiety. Being calm helps you think clearly and act effectively.</p></div>
+      <div class="card" style="padding:24px;"><div style="font-size:2rem;margin-bottom:12px;">🔍</div><h4 style="font-size:1rem;margin-bottom:8px;">2. Assess Condition</h4><p class="body-sm">Is breathing normal? Any visible wounds? Can they stand? Identify the key symptoms first.</p></div>
+      <div class="card" style="padding:24px;"><div style="font-size:2rem;margin-bottom:12px;">📞</div><h4 style="font-size:1rem;margin-bottom:8px;">3. Call a Vet</h4><p class="body-sm">Contact the nearest vet clinic immediately. Describe symptoms clearly and calmly.</p></div>
+      <div class="card" style="padding:24px;"><div style="font-size:2rem;margin-bottom:12px;">🚗</div><h4 style="font-size:1rem;margin-bottom:8px;">4. Transport Safely</h4><p class="body-sm">Wrap your pet in a towel. Keep them warm and as still as possible during transport.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#FFE38A"/><circle cx="32" cy="18" r="7" fill="#FFE38A"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#FFE38A" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#FFE38A" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#FFE38A"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#FFE38A" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#FFE38A"/><circle cx="35" cy="17" r="1.5" fill="#422824"/></svg></div><span class="logo-text">pawcare</span></a><p>A complete pet care platform — warm, integrated, and always accessible when your pet needs it most.</p><div class="footer-socials"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">🎵</a><a href="#" class="social-btn">🐦</a></div></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="emergency.html">Emergency</a></li><li><a href="appointment.html">Pet Appointment</a></li><li><a href="health-record.html">Health Record</a></li><li><a href="grooming.html">Grooming</a></li><li><a href="marketplace.html">Marketplace</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="contact.html">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Help</h5><ul><li><a href="contact.html">Contact</a></li><li><a href="emergency.html">Emergency</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 PawCare. All rights reserved. This is a prototype application.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

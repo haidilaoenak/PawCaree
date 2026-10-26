@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Record | PawCare</title>
+  <meta name="description" content="Digital health records for your pet: vaccination history, vet visits, medications, and smart reminders.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#422824"/><circle cx="32" cy="18" r="7" fill="#422824"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#422824" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#422824" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#422824"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#422824" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#422824"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#422824"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#422824"/><circle cx="35" cy="17" r="1.5" fill="#FFE38A"/></svg></div><span class="logo-text">pawcare</span></a><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-actions"><a href="emergency.html" class="btn btn-danger btn-sm">🚨 Emergency</a><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-drawer" id="mobileDrawer"><div class="drawer-panel"><a href="index.html">🏠 Home</a><a href="services.html">🩺 Services</a><a href="about.html">👋 About Us</a><a href="contact.html">💬 Contact</a><div class="drawer-divider"></div><a href="emergency.html" class="btn btn-danger">🚨 Emergency</a></div></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">📋 Health Record</span>
+    <h1>Pet Health Records</h1>
+    <p>Store your pet's health history, vaccinations, medications, and set important reminders — all in one place.</p>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:24px;padding-bottom:0;">
+  <div class="notice-box notice-yellow" style="margin-bottom:28px;">
+    <div class="notice-icon">ℹ️</div>
+    <p><strong>Prototype Demo:</strong> Data shown below is fictional sample data. Reminders are saved locally in your browser (localStorage) and are not sent as real push notifications or emails.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="health-layout">
+
+      <!-- LEFT: Pet Info + Medications -->
+      <div>
+        <div class="pet-card">
+          <div class="pet-avatar">🐕</div>
+          <h3>Buddy</h3>
+          <p class="pet-tag">Golden Retriever · Male</p>
+          <div class="pet-row"><span class="lbl">Date of Birth</span><span class="val">March 14, 2021</span></div>
+          <div class="pet-row"><span class="lbl">Age</span><span class="val">3 Years 7 Months</span></div>
+          <div class="pet-row"><span class="lbl">Weight</span><span class="val">28 kg</span></div>
+          <div class="pet-row"><span class="lbl">Color</span><span class="val">Golden / Cream</span></div>
+          <div class="pet-row"><span class="lbl">Microchip</span><span class="val">985141000012345 (Demo)</span></div>
+          <div class="pet-row"><span class="lbl">Allergy</span><span class="val">Chicken (demo)</span></div>
+          <div class="pet-row"><span class="lbl">Primary Vet</span><span class="val">Demo Vet Clinic</span></div>
+        </div>
+
+        <div class="record-card" style="margin-top:16px;">
+          <h4>💊 Active Medications</h4>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Heartgard Plus</strong><div class="r-label" style="font-size:.78rem;">Heartworm prevention</div></div><span class="badge badge-due">Monthly</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">NexGard</strong><div class="r-label" style="font-size:.78rem;">Flea &amp; tick prevention</div></div><span class="badge badge-done">Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Vitamin E</strong><div class="r-label" style="font-size:.78rem;">Coat supplement</div></div><span class="badge badge-due">Daily</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Records + Reminders -->
+      <div class="record-stack">
+
+        <!-- Vaccination -->
+        <div class="record-card">
+          <h4>💉 Vaccination History</h4>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Rabies</strong><div class="r-label" style="font-size:.78rem;">Jan 14, 2024</div></div><span class="badge badge-done">✓ Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza)</strong><div class="r-label" style="font-size:.78rem;">Mar 20, 2024</div></div><span class="badge badge-done">✓ Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Leptospirosis</strong><div class="r-label" style="font-size:.78rem;">Mar 20, 2024</div></div><span class="badge badge-done">✓ Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Bordetella</strong><div class="r-label" style="font-size:.78rem;">Due: Nov 15, 2026</div></div><span class="badge badge-due">Upcoming</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Rabies Booster</strong><div class="r-label" style="font-size:.78rem;">Due: Jan 14, 2025</div></div><span class="badge badge-miss">Overdue</span></div>
+        </div>
+
+        <!-- Vet Visits -->
+        <div class="record-card">
+          <h4>🏥 Vet Visit History</h4>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Routine Checkup</strong><div class="r-label" style="font-size:.78rem;">Sep 10, 2024 · Demo Vet Clinic</div></div><span class="badge badge-done">Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Skin Treatment (Dermatitis)</strong><div class="r-label" style="font-size:.78rem;">Jul 3, 2024 · Demo Vet Clinic</div></div><span class="badge badge-done">Done</span></div>
+          <div class="record-row"><div><strong style="font-size:.9rem;">Neutering</strong><div class="r-label" style="font-size:.78rem;">Feb 22, 2023 · Demo Animal Hospital</div></div><span class="badge badge-done">Done</span></div>
+        </div>
+
+        <!-- Reminders -->
+        <div class="record-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h4 style="margin:0;">🔔 Upcoming Reminders</h4>
+            <button class="btn btn-yellow btn-sm" onclick="openReminderModal()">+ Add Reminder</button>
+          </div>
+          <div class="reminder-list" id="reminderList"></div>
+          <div class="empty-state" id="reminderEmpty" style="display:none;">
+            <div class="empty-icon">🔔</div>
+            <p>No reminders yet. Click "+ Add Reminder" to create your first one.</p>
+          </div>
+          <div style="margin-top:14px;padding:10px 14px;background:var(--grey-100);border-radius:var(--r-sm);">
+            <p style="font-size:.76rem;color:var(--text-muted);">⚠️ Reminders are stored in your browser (localStorage) only and do not send real notifications.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add Reminder Modal -->
+<div class="modal-overlay" id="reminderModal">
+  <div class="modal-box" style="max-width:420px;">
+    <div class="modal-header"><h3>🔔 Add Reminder</h3><button class="modal-close" onclick="closeReminderModal()">✕</button></div>
+    <form id="reminderForm" novalidate>
+      <div class="form-group"><label for="r-title">Reminder Title *</label><input type="text" id="r-title" placeholder="e.g. Rabies Booster Vaccine" required></div>
+      <div class="form-group"><label for="r-type">Type</label><select id="r-type"><option value="vaccine">💉 Vaccination</option><option value="med">💊 Medication</option><option value="vet">🏥 Vet Visit</option><option value="groom">✂️ Grooming</option><option value="other">📌 Other</option></select></div>
+      <div class="form-group"><label for="r-date">Date *</label><input type="date" id="r-date" required></div>
+      <div class="form-group"><label for="r-note">Notes (optional)</label><textarea id="r-note" rows="2" placeholder="Additional information..."></textarea></div>
+      <button type="submit" class="btn btn-yellow form-submit">Save Reminder</button>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Reminder Modal -->
+<div class="modal-overlay" id="editReminderModal">
+  <div class="modal-box" style="max-width:420px;">
+    <div class="modal-header"><h3>✏️ Edit Reminder</h3><button class="modal-close" onclick="closeEditModal()">✕</button></div>
+    <form id="editReminderForm" novalidate>
+      <input type="hidden" id="edit-id">
+      <div class="form-group"><label for="edit-title">Reminder Title *</label><input type="text" id="edit-title" required></div>
+      <div class="form-group"><label for="edit-type">Type</label><select id="edit-type"><option value="vaccine">💉 Vaccination</option><option value="med">💊 Medication</option><option value="vet">🏥 Vet Visit</option><option value="groom">✂️ Grooming</option><option value="other">📌 Other</option></select></div>
+      <div class="form-group"><label for="edit-date">Date *</label><input type="date" id="edit-date" required></div>
+      <div class="form-group"><label for="edit-note">Notes (optional)</label><textarea id="edit-note" rows="2"></textarea></div>
+      <button type="submit" class="btn btn-yellow form-submit">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#FFE38A"/><circle cx="32" cy="18" r="7" fill="#FFE38A"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#FFE38A" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#FFE38A" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#FFE38A"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#FFE38A" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#FFE38A"/><circle cx="35" cy="17" r="1.5" fill="#422824"/></svg></div><span class="logo-text">pawcare</span></a><p>A complete pet care platform — warm, integrated, and always accessible when your pet needs it most.</p><div class="footer-socials"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">🎵</a><a href="#" class="social-btn">🐦</a></div></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="emergency.html">Emergency</a></li><li><a href="appointment.html">Pet Appointment</a></li><li><a href="health-record.html">Health Record</a></li><li><a href="grooming.html">Grooming</a></li><li><a href="marketplace.html">Marketplace</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="contact.html">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Help</h5><ul><li><a href="contact.html">Contact</a></li><li><a href="emergency.html">Emergency</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 PawCare. All rights reserved. This is a prototype application.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

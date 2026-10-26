@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace | PawCare</title>
+  <meta name="description" content="Shop premium pet products: food, toys, grooming supplies, and accessories — all in one place.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#422824"/><circle cx="32" cy="18" r="7" fill="#422824"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#422824" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#422824" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#422824"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#422824" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#422824"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#422824"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#422824"/><circle cx="35" cy="17" r="1.5" fill="#FFE38A"/></svg></div><span class="logo-text">pawcare</span></a><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul><div class="nav-actions"><a href="emergency.html" class="btn btn-danger btn-sm">🚨 Emergency</a>
+    <div class="cart-btn-wrap">
+      <button class="btn btn-yellow btn-sm" onclick="openCartModal()" id="cartBtn">🛒 Cart
+        <span class="cart-bubble cart-count-badge" id="cartCount">0</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+<div class="mobile-drawer" id="mobileDrawer"><div class="drawer-panel"><a href="index.html">🏠 Home</a><a href="services.html">🩺 Services</a><a href="about.html">👋 About Us</a><a href="contact.html">💬 Contact</a><div class="drawer-divider"></div><a href="emergency.html" class="btn btn-danger">🚨 Emergency</a></div></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">🛒 Marketplace</span>
+    <h1>Pet Product Store</h1>
+    <p>Browse curated products for your pet — premium food, toys, grooming tools, and accessories.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="notice-box notice-yellow mb-28" style="margin-top:28px;">
+      <div class="notice-icon">ℹ️</div>
+      <p><strong>Prototype Demo:</strong> All products, prices, and cart functions are for demonstration only. No real transaction or payment is processed.</p>
+    </div>
+
+    <div class="market-layout">
+
+      <!-- Sidebar -->
+      <div class="market-sidebar">
+        <div class="filter-card">
+          <h4>Filter by Category</h4>
+          <div class="filter-list">
+            <button class="filter-btn active" data-filter="all">🐾 All Products</button>
+            <button class="filter-btn" data-filter="food">🍖 Food</button>
+            <button class="filter-btn" data-filter="toys">🎾 Toys</button>
+            <button class="filter-btn" data-filter="grooming">✂️ Grooming</button>
+            <button class="filter-btn" data-filter="accessories">🎀 Accessories</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products -->
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card" data-cat="food" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&q=80&w=400" alt="Premium dog food"></div>
+          <div class="product-body"><div class="product-cat">Food</div><div class="product-name">Royal Canin Adult</div><div class="product-desc">Premium dry food for adult dogs, formulated for daily nutritional needs.</div><div class="product-footer"><div><div class="product-price">Rp 285,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Royal Canin Adult','285000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="food" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&q=80&w=400" alt="Dog treats"></div>
+          <div class="product-body"><div class="product-cat">Food</div><div class="product-name">Grain-Free Dog Treats</div><div class="product-desc">Healthy grain-free snacks for sensitive dogs — smoked chicken flavor, loved by all breeds.</div><div class="product-footer"><div><div class="product-price">Rp 68,000</div><span class="demo-label">Demo price · 150g</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Grain-Free Treats','68000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="food" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?auto=format&fit=crop&q=80&w=400" alt="Cat food"></div>
+          <div class="product-body"><div class="product-cat">Food</div><div class="product-name">Whiskas Tuna</div><div class="product-desc">Wet cat food with real tuna, rich in protein and omega-3 for a healthy shiny coat.</div><div class="product-footer"><div><div class="product-price">Rp 45,000</div><span class="demo-label">Demo price · 12pcs</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Whiskas Tuna','45000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="toys" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=400" alt="Dog toy ball"></div>
+          <div class="product-body"><div class="product-cat">Toys</div><div class="product-name">Kong Classic Ball</div><div class="product-desc">Durable rubber ball that can be stuffed with treats. Perfect for active dogs of all sizes.</div><div class="product-footer"><div><div class="product-price">Rp 135,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Kong Classic Ball','135000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="toys" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=400" alt="Cat feather toy"></div>
+          <div class="product-body"><div class="product-cat">Toys</div><div class="product-name">Feather Wand Cat Toy</div><div class="product-desc">Interactive feather wand that stimulates your cat's natural hunting instincts — fun and healthy!</div><div class="product-footer"><div><div class="product-price">Rp 55,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Feather Wand Toy','55000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="grooming" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1631220823305-b5985c1b4742?auto=format&fit=crop&q=80&w=400" alt="Pet shampoo"></div>
+          <div class="product-body"><div class="product-cat">Grooming</div><div class="product-name">Aloe Vera Pet Shampoo</div><div class="product-desc">Natural shampoo with aloe vera extract — gentle on skin, leaves coat shiny and soft.</div><div class="product-footer"><div><div class="product-price">Rp 78,000</div><span class="demo-label">Demo price · 250ml</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Aloe Vera Shampoo','78000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="grooming" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&q=80&w=400" alt="Pet brush"></div>
+          <div class="product-body"><div class="product-cat">Grooming</div><div class="product-name">FURminator Deshedding Brush</div><div class="product-desc">Professional brush that reduces shedding by up to 90%. Suitable for all coat types.</div><div class="product-footer"><div><div class="product-price">Rp 210,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'FURminator Brush','210000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="accessories" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&q=80&w=400" alt="Dog collar"></div>
+          <div class="product-body"><div class="product-cat">Accessories</div><div class="product-name">Premium Leather Collar</div><div class="product-desc">Genuine leather collar with stainless steel buckle. Available in 4 sizes and multiple colors.</div><div class="product-footer"><div><div class="product-price">Rp 125,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Leather Collar','125000')" title="Add to cart">+</button></div></div>
+        </div>
+
+        <div class="product-card" data-cat="accessories" onclick="openProductModal(this)">
+          <div class="product-img"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&q=80&w=400" alt="Pet carrier bag"></div>
+          <div class="product-body"><div class="product-cat">Accessories</div><div class="product-name">Soft Pet Carrier Bag</div><div class="product-desc">Comfortable, ventilated travel bag to safely carry your pet on outings or vet visits.</div><div class="product-footer"><div><div class="product-price">Rp 320,000</div><span class="demo-label">Demo price</span></div><button class="add-cart-btn" onclick="event.stopPropagation();addToCart(this,'Soft Carrier Bag','320000')" title="Add to cart">+</button></div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-box">
+    <div class="modal-header"><h3 id="modal-product-name">Product Name</h3><button class="modal-close" onclick="closeProductModal()">✕</button></div>
+    <img id="modal-product-img" src="" alt="" style="width:100%;height:220px;object-fit:cover;border-radius:var(--r-md);margin-bottom:18px;">
+    <div class="product-cat" id="modal-product-cat" style="margin-bottom:8px;"></div>
+    <p id="modal-product-desc" class="body-sm mb-16"></p>
+    <div style="display:flex;justify-content:space-between;align-items:center;background:var(--yellow-pale);border-radius:var(--r-md);padding:14px 18px;margin-bottom:20px;">
+      <div><div style="font-size:1.3rem;font-weight:700;color:var(--brown);" id="modal-product-price"></div><div style="font-size:.76rem;color:var(--text-muted);">Demo price · not a real price</div></div>
+      <button class="btn btn-yellow" id="modal-add-cart-btn" onclick="addToCartFromModal()">🛒 Add to Demo Cart</button>
+    </div>
+    <p style="font-size:.78rem;color:var(--text-muted);">⚠️ This is a demo product. No real purchase is made and no payment is processed.</p>
+  </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal-overlay" id="cartModal">
+  <div class="modal-box">
+    <div class="modal-header"><h3>🛒 Demo Cart</h3><button class="modal-close" onclick="closeCartModal()">✕</button></div>
+    <div id="cartItems" style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;"></div>
+    <div id="cartEmpty" style="text-align:center;padding:32px;color:var(--text-muted);">
+      <div style="font-size:2.5rem;margin-bottom:10px;">🛒</div>
+      <p>Your demo cart is empty.<br>Add some products to try this feature.</p>
+    </div>
+    <div id="cartTotal" style="display:none;border-top:2px solid var(--grey-200);padding-top:16px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;font-size:1.05rem;font-weight:700;color:var(--brown);">
+        <span>Total (Demo)</span><span id="cartTotalPrice">Rp 0</span>
+      </div>
+    </div>
+    <button class="btn btn-yellow form-submit" id="checkoutBtn" style="display:none;" onclick="demoCheckout()">Demo Checkout →</button>
+    <p style="font-size:.76rem;color:var(--text-muted);text-align:center;margin-top:10px;">⚠️ Demo cart only. No real purchase is processed.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo-wrap"><div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#FFE38A"/><circle cx="32" cy="18" r="7" fill="#FFE38A"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#FFE38A" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#FFE38A" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#FFE38A"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#FFE38A" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#FFE38A"/><circle cx="35" cy="17" r="1.5" fill="#422824"/></svg></div><span class="logo-text">pawcare</span></a><p>A complete pet care platform — warm, integrated, and always accessible when your pet needs it most.</p><div class="footer-socials"><a href="#" class="social-btn">📸</a><a href="#" class="social-btn">🎵</a><a href="#" class="social-btn">🐦</a></div></div>
+      <div class="footer-col"><h5>Services</h5><ul><li><a href="emergency.html">Emergency</a></li><li><a href="appointment.html">Pet Appointment</a></li><li><a href="health-record.html">Health Record</a></li><li><a href="grooming.html">Grooming</a></li><li><a href="marketplace.html">Marketplace</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="contact.html">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Help</h5><ul><li><a href="contact.html">Contact</a></li><li><a href="emergency.html">Emergency</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 PawCare. All rights reserved. This is a prototype application.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

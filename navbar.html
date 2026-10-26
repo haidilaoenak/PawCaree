@@ -1,0 +1,56 @@
+<!-- PAWCARE SHARED NAVBAR — paste via JS injection -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap">
+      <div class="logo-dog">
+        <!-- Dog balloon animal SVG (inline, dark brown) -->
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- body -->
+          <ellipse cx="22" cy="27" rx="9" ry="6" fill="#422824"/>
+          <!-- head -->
+          <circle cx="32" cy="18" r="7" fill="#422824"/>
+          <!-- ear left -->
+          <ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#422824" transform="rotate(-20 26 13)"/>
+          <!-- ear right -->
+          <ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#422824" transform="rotate(15 36 12)"/>
+          <!-- snout -->
+          <ellipse cx="38" cy="20" rx="4" ry="3" fill="#422824"/>
+          <!-- tail -->
+          <ellipse cx="12" cy="24" rx="4" ry="3" fill="#422824" transform="rotate(-30 12 24)"/>
+          <!-- front legs -->
+          <ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#422824"/>
+          <ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#422824"/>
+          <!-- back legs -->
+          <ellipse cx="12" cy="31" rx="3" ry="4" fill="#422824"/>
+          <!-- eye -->
+          <circle cx="35" cy="17" r="1.5" fill="#FFE38A"/>
+        </svg>
+      </div>
+      <span class="logo-text">pawcare</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" data-page="index">Home</a></li>
+      <li><a href="services.html" data-page="services">Services</a></li>
+      <li><a href="about.html" data-page="about">About Us</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="emergency.html" class="btn btn-danger btn-sm">🚨 Emergency</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile navigation">
+  <div class="drawer-panel">
+    <a href="index.html"     data-page="index">🏠 Home</a>
+    <a href="services.html"  data-page="services">🩺 Services</a>
+    <a href="about.html"     data-page="about">👋 About Us</a>
+    <a href="contact.html"   data-page="contact">💬 Contact</a>
+    <div class="drawer-divider"></div>
+    <a href="emergency.html" class="btn btn-danger">🚨 Emergency Help</a>
+  </div>
+</div>

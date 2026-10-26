@@ -1,0 +1,11 @@
+{
+  "name": "pawcare",
+  "version": "1.0.0",
+  "description": "PawCare — Pet Care Platform Prototype",
+  "scripts": {
+    "start": "npx serve . -l 3000 --no-clipboard",
+    "dev": "npx serve . -l 3000"
+  },
+  "keywords": ["pet", "care", "pawcare"],
+  "author": "PawCare Team"
+}

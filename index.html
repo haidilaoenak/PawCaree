@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawCare — Better Care for Every Paw</title>
+  <meta name="description" content="PawCare is a complete pet care platform: emergency care, appointments, health records, grooming, and marketplace — all in one place.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-wrap" aria-label="PawCare Home">
+      <div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#422824"/><circle cx="32" cy="18" r="7" fill="#422824"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#422824" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#422824" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#422824"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#422824" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#422824"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#422824"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#422824"/><circle cx="35" cy="17" r="1.5" fill="#FFE38A"/></svg></div>
+      <span class="logo-text">pawcare</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="emergency.html" class="btn btn-danger btn-sm">🚨 Emergency</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-panel">
+    <a href="index.html" class="active">🏠 Home</a>
+    <a href="services.html">🩺 Services</a>
+    <a href="about.html">👋 About Us</a>
+    <a href="contact.html">💬 Contact</a>
+    <div class="drawer-divider"></div>
+    <a href="emergency.html" class="btn btn-danger">🚨 Emergency</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">🐾 PawCare Prototype</span>
+      <h1 class="headline-xl mb-20">Better Care for <br>Every <em style="font-style:normal;text-decoration:underline;text-decoration-color:var(--brown-light);text-decoration-thickness:3px;">Paw</em></h1>
+      <p class="body-lg hero-desc mb-28">Explore a prototype that brings together emergency guidance, appointments, health records, grooming, and pet essentials.</p>
+      <div class="hero-btns">
+        <a href="services.html" class="btn btn-brown btn-lg">Explore Services</a>
+        <a href="emergency.html" class="btn btn-danger btn-lg">🚨 Emergency Care</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=800"
+           alt="Happy golden retriever with owner" class="float">
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY STRIP -->
+<div class="emergency-strip">
+  <div class="emergency-strip-inner">
+    <div class="emergency-strip-left">
+      <div class="pulse-icon"><div class="pulse-icon-inner">🚑</div></div>
+      <div class="emergency-strip-text">
+        <h3>When Every Minute Matters</h3>
+        <p>Explore general guidance and location-search options. For urgent situations, contact a qualified veterinarian directly.</p>
+      </div>
+    </div>
+    <a href="emergency.html" class="btn btn-outline-white">Get Emergency Help →</a>
+  </div>
+</div>
+
+<!-- 5 SERVICES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-header mb-36">
+      <span class="eyebrow">🩺 Our Features</span>
+      <h2 class="headline-lg mb-12">Five Complete Services for Your Pet</h2>
+      <p class="section-desc">Everything you need to care for your pet, available in one integrated digital ecosystem.</p>
+    </div>
+    <div class="services-grid-5">
+      <a href="emergency.html" class="service-card emergency-card reveal">
+        <div class="service-icon-wrap icon-red">🚨</div>
+        <h3>Emergency</h3>
+        <p>Explore general guidance and a location-search prototype. Live clinic results are not connected.</p>
+        <span class="service-link">Access Now →</span>
+      </a>
+      <a href="appointment.html" class="service-card reveal reveal-delay-1">
+        <div class="service-icon-wrap icon-blue">📅</div>
+        <h3>Pet Appointment</h3>
+        <p>Try a demo request for an online consultation or an in-person visit.</p>
+        <span class="service-link">Book Now →</span>
+      </a>
+      <a href="health-record.html" class="service-card reveal reveal-delay-2">
+        <div class="service-icon-wrap icon-yellow">📋</div>
+        <h3>Health Record &amp; Reminders</h3>
+        <p>View fictional example records and create reminders stored in this browser.</p>
+        <span class="service-link">View Records →</span>
+      </a>
+      <a href="grooming.html" class="service-card reveal reveal-delay-3">
+        <div class="service-icon-wrap icon-brown">✂️</div>
+        <h3>Grooming</h3>
+        <p>Explore grooming options and submit a demo request with no real booking.</p>
+        <span class="service-link">Book Grooming →</span>
+      </a>
+      <a href="marketplace.html" class="service-card reveal reveal-delay-4">
+        <div class="service-icon-wrap icon-green">🛒</div>
+        <h3>Marketplace</h3>
+        <p>Browse fictional products and sample prices, and try a demo cart without checkout.</p>
+        <span class="service-link">Shop Now →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="two-col-img-right">
+      <div class="hiw-img reveal">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800"
+             alt="Cat resting comfortably at home" class="float2">
+      </div>
+      <div class="reveal reveal-delay-2">
+        <span class="eyebrow">⚡ Simple &amp; Easy</span>
+        <h2 class="headline-lg mb-28">How PawCare Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Keep Basic Pet Details</strong>
+              <p>See how basic pet information can be organized as part of a health record.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Explore Our Services</strong>
+              <p>Explore the five service categories and their separate demo flows.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Manage with Ease</strong>
+              <p>Try local reminder and demo-cart interactions. No external requests are submitted.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PAWCARE -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-header mb-36">
+      <span class="eyebrow">💙 Why PawCare</span>
+      <h2 class="headline-lg mb-12">Built for Pet Owners, by Pet Owners</h2>
+      <p class="section-desc">A platform designed with love to simplify the lives of pet owners everywhere.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal">
+        <div class="benefit-icon">🛡️</div>
+        <h4>Organized Information</h4>
+        <p>Review sample health details and see how reminders can be grouped in one place.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-1">
+        <div class="benefit-icon">⚡</div>
+        <h4>Fast Access</h4>
+        <p>The Emergency page encourages contacting a qualified veterinarian for urgent care.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <div class="benefit-icon">📍</div>
+        <h4>Local Guidance</h4>
+        <p>Explore the location search flow. Live clinic, groomer, or availability data is not connected.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <div class="benefit-icon">❤️</div>
+        <h4>Made with Love</h4>
+        <p>The prototype is designed around common pet-care journeys and clear demo states.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-banner">
+      <div class="cta-banner-inner">
+        <span class="eyebrow">🐾 Get Started</span>
+        <h2 class="headline-lg mb-12">Start Caring for Your Pet Today</h2>
+        <p class="mb-28">Explore the PawCare concept and try the interactive prototype flows.</p>
+        <div class="cta-btns">
+          <a href="services.html" class="btn btn-brown btn-lg">Explore All Services</a>
+          <a href="contact.html" class="btn btn-outline-brown btn-lg">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-wrap">
+          <div class="logo-dog"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="22" cy="27" rx="9" ry="6" fill="#FFE38A"/><circle cx="32" cy="18" r="7" fill="#FFE38A"/><ellipse cx="26" cy="13" rx="3.5" ry="5" fill="#FFE38A" transform="rotate(-20 26 13)"/><ellipse cx="36" cy="12" rx="3" ry="4.5" fill="#FFE38A" transform="rotate(15 36 12)"/><ellipse cx="38" cy="20" rx="4" ry="3" fill="#FFE38A"/><ellipse cx="12" cy="24" rx="4" ry="3" fill="#FFE38A" transform="rotate(-30 12 24)"/><ellipse cx="19" cy="34" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="26" cy="35" rx="3" ry="4.5" fill="#FFE38A"/><ellipse cx="12" cy="31" rx="3" ry="4" fill="#FFE38A"/><circle cx="35" cy="17" r="1.5" fill="#422824"/></svg></div>
+          <span class="logo-text">pawcare</span>
+        </a>
+        <p>A prototype concept for organizing pet-care journeys in one place.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="emergency.html">Emergency</a></li>
+          <li><a href="appointment.html">Pet Appointment</a></li>
+          <li><a href="health-record.html">Health Record</a></li>
+          <li><a href="grooming.html">Grooming</a></li>
+          <li><a href="marketplace.html">Marketplace</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#team">Our Team</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Help</h5>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="emergency.html">Emergency</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 PawCare. All rights reserved. This is a prototype application.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
